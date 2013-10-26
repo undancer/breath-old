@@ -1,0 +1,3 @@
+rootProject.name = 'breath'
+include 'breath-core'
+project(':breath-core').projectDir = "$rootDir/modules/core" as File
