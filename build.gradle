@@ -15,7 +15,6 @@ allprojects {
 
     repositories {
         mavenLocal()
-
         maven { url "http://repo.maven.apache.org/maven2" }
         maven { url "http://maven.oschina.net/content/groups/public" }
     }
@@ -30,22 +29,22 @@ subprojects {
     apply plugin: 'war'
 
     dependencies {
-        [
+        compile(
                 'org.slf4j:slf4j-api:1.7.5',
                 'org.slf4j:jcl-over-slf4j:1.7.5',
                 'org.slf4j:log4j-over-slf4j:1.7.5',
                 'ch.qos.logback:logback-classic:1.0.13'
-        ].each {
-            compile it
-        }
+        )
     }
 
 }
 
 project(':breath-core') {
     dependencies {
-        providedCompile(group: 'javax.servlet', name: 'javax.servlet-api', version: '3.1.0')
-        providedCompile(group: 'javax.servlet.jsp', name: 'javax.servlet.jsp-api', version: '2.2.1')
+        providedCompile(
+                'javax.servlet:javax.servlet-api:3.1.0',
+                'javax.servlet.jsp:javax.servlet.jsp-api:2.2.1'
+        )
 
         compile 'javax.inject:javax.inject:1'
 
