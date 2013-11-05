@@ -3,13 +3,12 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="requestFilter" class="com.github.undancer.breath.core.RequestFilter">
-    </bean>
+    <bean id="requestFilter" class="com.undancer.breath.core.RequestFilter"/>
 
-    <bean id="characterEncodingFilter" class="org.springframework.web.filter.CharacterEncodingFilter">
-        <property name="forceEncoding" value="true"/>
-        <property name="encoding" value="UTF-8"/>
-    </bean>
+    <!--<bean id="characterEncodingFilter" class="org.springframework.web.filter.CharacterEncodingFilter">-->
+    <!--<property name="forceEncoding" value="true"/>-->
+    <!--<property name="encoding" value="UTF-8"/>-->
+    <!--</bean>-->
 
     <bean id="hiddenHttpMethodFilter" class="org.springframework.web.filter.HiddenHttpMethodFilter">
     </bean>

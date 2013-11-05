@@ -1,4 +1,4 @@
-package com.github.undancer.breath.core
+package com.undancer.breath.core
 
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.RequestMapping

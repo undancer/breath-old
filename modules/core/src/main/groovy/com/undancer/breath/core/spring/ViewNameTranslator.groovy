@@ -1,12 +1,12 @@
-package com.github.undancer.breath.core.spring
+package com.undancer.breath.core.spring
 
-import com.github.undancer.breath.core.util.BeanUtils
+import com.undancer.breath.core.util.BeanUtils
 import org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator
 
 import javax.inject.Named
 import javax.servlet.http.HttpServletRequest
 
-import static com.github.undancer.breath.core.util.RequestUtils.contextRelative
+import static com.undancer.breath.core.util.RequestUtils.contextRelative
 import static org.springframework.util.StringUtils.stripFilenameExtension
 
 /**

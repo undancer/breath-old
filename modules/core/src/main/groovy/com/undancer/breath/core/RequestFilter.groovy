@@ -1,4 +1,4 @@
-package com.github.undancer.breath.core
+package com.undancer.breath.core
 
 import groovy.util.logging.Slf4j
 import org.springframework.core.NamedThreadLocal
@@ -24,6 +24,13 @@ class RequestFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
 
         requestHolder.set(request)
+
+        if (request.characterEncoding == null) {
+            request.characterEncoding = 'UTF-8'
+        }
+        if (response.characterEncoding == null) {
+            response.characterEncoding = 'UTF-8'
+        }
 
         filterChain.doFilter(request, response)
 

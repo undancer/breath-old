@@ -27,14 +27,14 @@
         </init-param>
     </filter>
 
-    <filter>
-        <filter-name>characterEncodingFilter</filter-name>
-        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
-        <init-param>
-            <param-name>targetFilterLifecycle</param-name>
-            <param-value>true</param-value>
-        </init-param>
-    </filter>
+    <!--<filter>-->
+    <!--<filter-name>characterEncodingFilter</filter-name>-->
+    <!--<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>-->
+    <!--<init-param>-->
+    <!--<param-name>targetFilterLifecycle</param-name>-->
+    <!--<param-value>true</param-value>-->
+    <!--</init-param>-->
+    <!--</filter>-->
 
     <filter>
         <filter-name>hiddenHttpMethodFilter</filter-name>
@@ -59,10 +59,10 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
-    <filter-mapping>
-        <filter-name>characterEncodingFilter</filter-name>
-        <url-pattern>/*</url-pattern>
-    </filter-mapping>
+    <!--<filter-mapping>-->
+    <!--<filter-name>characterEncodingFilter</filter-name>-->
+    <!--<url-pattern>/*</url-pattern>-->
+    <!--</filter-mapping>-->
 
     <filter-mapping>
         <filter-name>hiddenHttpMethodFilter</filter-name>
@@ -93,18 +93,4 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
-    <!--<servlet>-->
-    <!--<servlet-name>jersey</servlet-name>-->
-    <!--<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>-->
-    <!--<init-param>-->
-    <!--<param-name>javax.ws.rs.Application</param-name>-->
-    <!--<param-value>com.github.undancer.webapp.Application</param-value>-->
-    <!--</init-param>-->
-    <!--<load-on-startup>1</load-on-startup>-->
-    <!--</servlet>-->
-
-    <!--<servlet-mapping>-->
-    <!--<servlet-name>jersey</servlet-name>-->
-    <!--<url-pattern>/api/*</url-pattern>-->
-    <!--</servlet-mapping>-->
 </web-fragment>

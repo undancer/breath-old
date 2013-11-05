@@ -1,4 +1,4 @@
-package com.github.undancer.breath.core.spring
+package com.undancer.breath.core.spring
 
 import org.springframework.web.servlet.ViewResolver
 import org.springframework.web.servlet.view.ContentNegotiatingViewResolver

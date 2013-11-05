@@ -1,6 +1,6 @@
-package com.github.undancer.breath.core.util
+package com.undancer.breath.core.util
 
-import com.github.undancer.breath.core.RequestFilter
+import com.undancer.breath.core.RequestFilter
 import org.springframework.beans.BeansException
 import org.springframework.context.ApplicationContext
 import org.springframework.context.ApplicationContextAware

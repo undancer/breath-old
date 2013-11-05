@@ -17,7 +17,7 @@
         <!--<property name="defaultContentType" value="TEXT_HTML"/>-->
     </bean>
 
-    <bean id="viewResolverConfiguration" class="com.github.undancer.breath.core.spring.ViewResolverConfiguration">
+    <bean id="viewResolverConfiguration" class="com.undancer.breath.core.spring.ViewResolverConfiguration">
         <property name="contentNegotiationManager" ref="contentNegotiationManager"/>
     </bean>
 

@@ -1,4 +1,4 @@
-package com.github.undancer.breath.core
+package com.undancer.breath.core
 
 import groovy.util.logging.Slf4j
 import org.springframework.validation.BindException

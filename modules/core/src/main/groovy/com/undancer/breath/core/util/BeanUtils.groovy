@@ -1,6 +1,5 @@
-package com.github.undancer.breath.core.util
+package com.undancer.breath.core.util
 
-import org.springframework.beans.BeansException
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory
 
@@ -19,7 +18,7 @@ class BeanUtils implements BeanFactoryPostProcessor {
 
     private static ConfigurableListableBeanFactory beanFactory
 
-    void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
+    void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) {
         BeanUtils.beanFactory = beanFactory
     }
 
