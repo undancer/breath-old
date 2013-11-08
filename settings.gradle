@@ -1,13 +1,4 @@
-rootProject.name = 'breath'
-//
-//include 'breath-core'
-//include 'breath-webapp'
-//include 'breath-gradle-plugin'
-//
-//project(':breath-core').projectDir = "$rootDir/modules/core" as File
-//project(':breath-webapp').projectDir = "$rootDir/samples/webapp" as File
-//project(':breath-gradle-plugin').projectDir = "$rootDir/buildSrc" as File
-
+//rootProject.name = 'breath'
 
 include 'breath-gradle-plugin'
 

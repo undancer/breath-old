@@ -19,7 +19,8 @@ import javax.servlet.http.HttpServletResponse
 @Slf4j
 class RequestFilter extends OncePerRequestFilter {
 
-    private static final ThreadLocal<HttpServletRequest> requestHolder = new NamedThreadLocal<HttpServletRequest>('request')
+    private static
+    final ThreadLocal<HttpServletRequest> requestHolder = new NamedThreadLocal<HttpServletRequest>('request')
 
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
 
