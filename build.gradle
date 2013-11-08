@@ -50,9 +50,9 @@ subprojects {
         compile "org.codehaus.groovy:groovy-all:$groovyVersion"
         compile "org.codehaus.gpars:gpars:$gparsVersion"
 
-        ['slf4j-api', 'jcl-over-slf4j', 'log4j-over-slf4j'].each {
-            compile "org.slf4j:$it:$slf4jVersion"
-        }
+        compile "org.slf4j:slf4j-api:$slf4jVersion"
+        compile "org.slf4j:jcl-over-slf4j:$slf4jVersion"
+        compile "org.slf4j:log4j-over-slf4j:$slf4jVersion"
         compile "ch.qos.logback:logback-classic:$logbackVersion"
 
         compile 'com.google.guava:guava:15.0'
@@ -114,6 +114,9 @@ project(':breath-webapp') {
     apply plugin: 'tomcat'
     apply plugin: 'jetty'
 
+    tomcatRun {
+        contextPath = '/'
+    }
 
     dependencies {
         providedCompile "org.apache.tomcat:tomcat-servlet-api:$tomcatVersion"
@@ -137,11 +140,14 @@ project(':breath-webapp') {
 //
 //        compile 'com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.2.3'
 
-
-        ['tomcat-embed-core', 'tomcat-embed-logging-juli', 'tomcat-embed-jasper'].each {
-            tomcat("org.apache.tomcat.embed:$it:$tomcatVersion") {
-                exclude group: 'org.eclipse.jdt.core.compiler', module: 'ecj'
-            }
+        tomcat("org.apache.tomcat.embed:tomcat-embed-core:$tomcatVersion") {
+            exclude group: 'org.eclipse.jdt.core.compiler', module: 'ecj'
+        }
+        tomcat("org.apache.tomcat.embed:tomcat-embed-jasper:$tomcatVersion") {
+            exclude group: 'org.eclipse.jdt.core.compiler', module: 'ecj'
+        }
+        tomcat("org.apache.tomcat.embed:tomcat-embed-logging-juli:$tomcatVersion") {
+            exclude group: 'org.eclipse.jdt.core.compiler', module: 'ecj'
         }
     }
 }
