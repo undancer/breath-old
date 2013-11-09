@@ -9,6 +9,5 @@ import org.springframework.web.bind.annotation.RequestMapping
 @Controller
 class RootController {
     @RequestMapping('/')
-    void root() {
-    }
+    void root() {}
 }

@@ -2,7 +2,6 @@ package com.undancer.breath.core
 
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.RequestMapping
-
 /**
  * Created with IntelliJ IDEA.
  * User: undancer
