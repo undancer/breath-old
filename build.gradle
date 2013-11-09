@@ -20,7 +20,7 @@ allprojects {
         metricsVersion = '3.0.1'
         groovyVersion = '2.1.8'
         gparsVersion = '1.1.0'
-        springVersion = '3.2.4.RELEASE'
+        springVersion = '3.2.5.RELEASE'
         tomcatVersion = '7.0.47'
         slf4jVersion = '1.7.5'
         logbackVersion = '1.0.3'
@@ -48,6 +48,8 @@ subprojects {
 
     sourceCompatibility = 1.7
     targetCompatibility = 1.7
+
+    compileJava.options.encoding = 'UTF-8'
 
     dependencies {
         compile "org.codehaus.groovy:groovy-all:$groovyVersion"
