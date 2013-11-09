@@ -25,6 +25,7 @@ allprojects {
         slf4jVersion = '1.7.5'
         logbackVersion = '1.0.3'
         junitVersion = '4.11'
+        shiroVersion = '1.2.2'
         gradleScriptDir = "${rootProject.projectDir}/gradle/scripts"
     }
 
@@ -101,6 +102,17 @@ project(':breath-core') {
     }
 }
 
+project(':breath-security') {
+    dependencies {
+        compile project(':breath-core')
+
+        compile "org.apache.shiro:shiro-core:$shiroVersion"
+        compile "org.apache.shiro:shiro-web:$shiroVersion"
+        compile "org.apache.shiro:shiro-spring:$shiroVersion"
+
+    }
+}
+
 project(':breath-webapp') {
 
     apply plugin: 'war'
@@ -116,6 +128,7 @@ project(':breath-webapp') {
         providedCompile "org.apache.tomcat:tomcat-jsp-api:$tomcatVersion"
 
         compile(project(':breath-core'))
+        compile(project(':breath-security'))
 
 //        compile(group: 'org.glassfish.jersey.ext', name: 'jersey-spring3', version: '2.3.1') {
 //            exclude(group: 'commons-logging', module: 'commons-logging')

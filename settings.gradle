@@ -1,7 +1,9 @@
 //rootProject.name = 'breath'
 
 include 'breath-core'
+include 'breath-security'
 include 'breath-webapp'
 
 project(':breath-core').projectDir = "$rootDir/modules/core" as File
+project(':breath-security').projectDir = "$rootDir/modules/security" as File
 project(':breath-webapp').projectDir = "$rootDir/samples/webapp" as File
