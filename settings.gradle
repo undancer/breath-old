@@ -1,10 +1,7 @@
 //rootProject.name = 'breath'
 
-include 'breath-gradle-plugin'
-
 include 'breath-core'
 include 'breath-webapp'
 
 project(':breath-core').projectDir = "$rootDir/modules/core" as File
 project(':breath-webapp').projectDir = "$rootDir/samples/webapp" as File
-project(':breath-gradle-plugin').projectDir = "$rootDir/buildSrc" as File

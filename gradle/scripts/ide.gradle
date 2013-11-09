@@ -1,0 +1,2 @@
+//apply plugin: 'propdeps-eclipse'
+apply plugin: 'propdeps-idea'

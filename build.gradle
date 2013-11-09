@@ -1,9 +1,12 @@
 buildscript {
     repositories {
         jcenter()
+        maven { url "http://repo.springsource.org/plugins-release" }
     }
 
     dependencies {
+        classpath("org.springframework.build.gradle:propdeps-plugin:0.0.4")
+//        classpath("org.asciidoctor:asciidoctor-gradle-plugin:0.7.0")
         classpath 'org.gradle.api.plugins:gradle-tomcat-plugin:1.0'
     }
 }
@@ -12,10 +15,6 @@ allprojects {
 
     group = 'com.github.undancer'
     version = '1.0-SNAPSHOT'
-
-    apply plugin: 'maven'
-    apply plugin: 'eclipse'
-    apply plugin: 'idea'
 
     ext {
         metricsVersion = '3.0.1'
@@ -26,7 +25,11 @@ allprojects {
         slf4jVersion = '1.7.5'
         logbackVersion = '1.0.3'
         junitVersion = '4.11'
+        gradleScriptDir = "${rootProject.projectDir}/gradle/scripts"
     }
+
+    apply plugin: 'maven'
+    apply from: "${gradleScriptDir}/ide.gradle"
 
     repositories {
         mavenLocal()
@@ -59,18 +62,6 @@ subprojects {
 
         testCompile("junit:junit:$junitVersion")
     }
-}
-
-project(':breath-gradle-plugin') {
-
-    apply plugin: 'groovy'
-
-    dependencies {
-        compile gradleApi()
-        compile localGroovy()
-    }
-
-    configurations.archives.artifacts.clear()
 }
 
 project(':breath-core') {
