@@ -1,6 +1,5 @@
 package com.undancer.breath.core
 
-import groovy.transform.PackageScope
 import groovy.util.logging.Slf4j
 import org.springframework.core.NamedThreadLocal
 import org.springframework.web.filter.OncePerRequestFilter
@@ -23,8 +22,7 @@ class RequestFilter extends OncePerRequestFilter {
     private static
     final ThreadLocal<HttpServletRequest> requestHolder = new NamedThreadLocal<HttpServletRequest>('request')
 
-    @PackageScope
-    void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
 
         requestHolder.set(request)
 

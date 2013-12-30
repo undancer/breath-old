@@ -5,11 +5,6 @@
 
     <bean id="requestFilter" class="com.undancer.breath.core.RequestFilter"/>
 
-    <!--<bean id="characterEncodingFilter" class="org.springframework.web.filter.CharacterEncodingFilter">-->
-    <!--<property name="forceEncoding" value="true"/>-->
-    <!--<property name="encoding" value="UTF-8"/>-->
-    <!--</bean>-->
-
     <bean id="hiddenHttpMethodFilter" class="org.springframework.web.filter.HiddenHttpMethodFilter">
     </bean>
 
