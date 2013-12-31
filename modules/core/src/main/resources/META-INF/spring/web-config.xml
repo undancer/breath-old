@@ -1,61 +1,61 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+<!--xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"-->
+<!--xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">-->
 
-    <mvc:annotation-driven content-negotiation-manager="contentNegotiationManager">
+<!--<mvc:annotation-driven content-negotiation-manager="contentNegotiationManager">-->
 
-    </mvc:annotation-driven>
+<!--</mvc:annotation-driven>-->
 
-    <!--<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping">-->
-    <!--<property name="contentNegotiationManager" ref="contentNegotiationManager"/>-->
-    <!--</bean>-->
+<!--&lt;!&ndash;<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping">&ndash;&gt;-->
+<!--&lt;!&ndash;<property name="contentNegotiationManager" ref="contentNegotiationManager"/>&ndash;&gt;-->
+<!--&lt;!&ndash;</bean>&ndash;&gt;-->
 
-    <mvc:resources mapping="/humans.txt" location="/,classpath:META-INF/assets/" order="-1"/>
-    <mvc:resources mapping="/robots.txt" location="/,classpath:META-INF/assets/" order="-1"/>
-    <mvc:resources mapping="/favicon.ico" location="/,classpath:META-INF/assets/" order="-1"/>
-    <mvc:resources mapping="/crossdomain.xml" location="/,classpath:META-INF/assets/" order="-1"/>
+<!--<mvc:resources mapping="/humans.txt" location="/,classpath:META-INF/assets/" order="-1"/>-->
+<!--<mvc:resources mapping="/robots.txt" location="/,classpath:META-INF/assets/" order="-1"/>-->
+<!--<mvc:resources mapping="/favicon.ico" location="/,classpath:META-INF/assets/" order="-1"/>-->
+<!--<mvc:resources mapping="/crossdomain.xml" location="/,classpath:META-INF/assets/" order="-1"/>-->
 
-    <mvc:default-servlet-handler/>
+<!--<mvc:default-servlet-handler/>-->
 
-    <bean id="contentNegotiationManager" class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
-        <property name="favorParameter" value="true"/>
-        <property name="favorPathExtension" value="true"/>
-        <property name="useJaf" value="true"/>
-        <!--<property name="defaultContentType" value="TEXT_HTML"/>-->
-    </bean>
+<!--<bean id="contentNegotiationManager" class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">-->
+<!--<property name="favorParameter" value="true"/>-->
+<!--<property name="favorPathExtension" value="true"/>-->
+<!--<property name="useJaf" value="true"/>-->
+<!--&lt;!&ndash;<property name="defaultContentType" value="TEXT_HTML"/>&ndash;&gt;-->
+<!--</bean>-->
 
 
-    <!--<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping" p:order="2147483646">-->
-    <!--<property name="urlMap">-->
-    <!--<map>-->
-    <!--<entry key="/css/**/*" value-ref="resourceHttpRequestHandler"/>-->
-    <!--<entry key="/font/**/*" value-ref="resourceHttpRequestHandler"/>-->
-    <!--<entry key="/img/**/*" value-ref="resourceHttpRequestHandler"/>-->
-    <!--<entry key="/ico/**/*" value-ref="resourceHttpRequestHandler"/>-->
-    <!--<entry key="/js/**/*" value-ref="resourceHttpRequestHandler"/>-->
-    <!--<entry key="/res/**/*" value-ref="resourceHttpRequestHandler"/>-->
-    <!--<entry key="/favicon.ico" value-ref="resourceHttpRequestHandler"/>-->
-    <!--<entry key="/humans.txt" value-ref="resourceHttpRequestHandler"/>-->
-    <!--<entry key="/robots.txt" value-ref="resourceHttpRequestHandler"/>-->
-    <!--</map>-->
-    <!--</property>-->
-    <!--</bean>-->
+<!--&lt;!&ndash;<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping" p:order="2147483646">&ndash;&gt;-->
+<!--&lt;!&ndash;<property name="urlMap">&ndash;&gt;-->
+<!--&lt;!&ndash;<map>&ndash;&gt;-->
+<!--&lt;!&ndash;<entry key="/css/**/*" value-ref="resourceHttpRequestHandler"/>&ndash;&gt;-->
+<!--&lt;!&ndash;<entry key="/font/**/*" value-ref="resourceHttpRequestHandler"/>&ndash;&gt;-->
+<!--&lt;!&ndash;<entry key="/img/**/*" value-ref="resourceHttpRequestHandler"/>&ndash;&gt;-->
+<!--&lt;!&ndash;<entry key="/ico/**/*" value-ref="resourceHttpRequestHandler"/>&ndash;&gt;-->
+<!--&lt;!&ndash;<entry key="/js/**/*" value-ref="resourceHttpRequestHandler"/>&ndash;&gt;-->
+<!--&lt;!&ndash;<entry key="/res/**/*" value-ref="resourceHttpRequestHandler"/>&ndash;&gt;-->
+<!--&lt;!&ndash;<entry key="/favicon.ico" value-ref="resourceHttpRequestHandler"/>&ndash;&gt;-->
+<!--&lt;!&ndash;<entry key="/humans.txt" value-ref="resourceHttpRequestHandler"/>&ndash;&gt;-->
+<!--&lt;!&ndash;<entry key="/robots.txt" value-ref="resourceHttpRequestHandler"/>&ndash;&gt;-->
+<!--&lt;!&ndash;</map>&ndash;&gt;-->
+<!--&lt;!&ndash;</property>&ndash;&gt;-->
+<!--&lt;!&ndash;</bean>&ndash;&gt;-->
 
-    <!--<bean id="resourceHttpRequestHandler" class="org.springframework.web.servlet.resource.ResourceHttpRequestHandler">-->
-    <!--<property name="locations">-->
-    <!--<list>-->
-    <!--&lt;!&ndash;<value>classpath:META-INF/assets/css/</value>&ndash;&gt;-->
-    <!--&lt;!&ndash;<value>classpath:META-INF/assets/font/</value>&ndash;&gt;-->
-    <!--&lt;!&ndash;<value>classpath:META-INF/assets/img/</value>&ndash;&gt;-->
-    <!--&lt;!&ndash;<value>classpath:META-INF/assets/js/</value>&ndash;&gt;-->
-    <!--&lt;!&ndash;<value>classpath:META-INF/assets/res/</value>&ndash;&gt;-->
-    <!--<value>classpath:META-INF/assets/</value>-->
-    <!--</list>-->
-    <!--</property>-->
-    <!--</bean>-->
-    <!--<bean id="viewResolverConfiguration" class="com.undancer.breath.core.spring.ViewResolverConfiguration">-->
-    <!--<property name="contentNegotiationManager" ref="contentNegotiationManager"/>-->
-    <!--</bean>-->
+<!--&lt;!&ndash;<bean id="resourceHttpRequestHandler" class="org.springframework.web.servlet.resource.ResourceHttpRequestHandler">&ndash;&gt;-->
+<!--&lt;!&ndash;<property name="locations">&ndash;&gt;-->
+<!--&lt;!&ndash;<list>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;<value>classpath:META-INF/assets/css/</value>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;<value>classpath:META-INF/assets/font/</value>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;<value>classpath:META-INF/assets/img/</value>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;<value>classpath:META-INF/assets/js/</value>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;<value>classpath:META-INF/assets/res/</value>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;<value>classpath:META-INF/assets/</value>&ndash;&gt;-->
+<!--&lt;!&ndash;</list>&ndash;&gt;-->
+<!--&lt;!&ndash;</property>&ndash;&gt;-->
+<!--&lt;!&ndash;</bean>&ndash;&gt;-->
+<!--&lt;!&ndash;<bean id="viewResolverConfiguration" class="com.undancer.breath.core.spring.ViewResolverConfiguration">&ndash;&gt;-->
+<!--&lt;!&ndash;<property name="contentNegotiationManager" ref="contentNegotiationManager"/>&ndash;&gt;-->
+<!--&lt;!&ndash;</bean>&ndash;&gt;-->
 
-</beans>
+<!--</beans>-->

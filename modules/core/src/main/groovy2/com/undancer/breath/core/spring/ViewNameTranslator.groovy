@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest
 
 import static com.undancer.breath.core.util.RequestUtils.contextRelative
 import static org.springframework.util.StringUtils.stripFilenameExtension
+
 /**
  * Created with IntelliJ IDEA.
  * User: undancer
