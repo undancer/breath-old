@@ -1,5 +1,7 @@
 package com.undancer.breath.core.util
 
+import static org.springframework.util.ResourceUtils.isJarURL
+
 /**
  * Created by undancer on 13-11-9.
  */
@@ -13,10 +15,7 @@ class ResourceUtils {
 
     static URL getClassPathResource(String name, boolean isJar) {
         List<URL> list = getClassPathResources(name, isJar)
-        if (!list.isEmpty()) {
-            return list.first()
-        }
-        return null
+        return !list.empty ? list.first() : null
     }
 
     static List<URL> getClassPathResources(String name) {
@@ -27,10 +26,11 @@ class ResourceUtils {
 
         List<URL> list = []
         try {
-            Enumeration<URL> resources = RequestUtils.class.classLoader.getResources(name)
+            Enumeration<URL> resources = RequestUtils.classLoader.getResources(name)
+
             while (resources.hasMoreElements()) {
                 URL resource = resources.nextElement()
-                if (isJar || isJar == org.springframework.util.ResourceUtils.isJarURL(resource)) {
+                if (isJar || isJar == isJarURL(resource)) {
                     list << resource
                 }
             }

@@ -14,5 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping
 class PagesController {
 
     @RequestMapping('/**/*')
-    void pages() {}
+    void pages() {
+        println "pages"
+    }
 }
