@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:axon="http://www.axonframework.org/schema/core"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.axonframework.org/schema/core http://www.axonframework.org/schema/axon-core.xsd http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
+
+    <!--<axon:event-sourcing-repository aggregate-type=""-->
+
+    <!--<axon:aggregate-command-handler aggregate-type="" repository="" command-bus=""-->
+
+    <!--<axon:annotation-config-->
+    <task:executor id="taskExecutor"/>
+
+    <axon:event-sourcing-repository id="userRepository" aggregate-type="com.undancer.breath.samples.user.entity.User"
+                                    event-store="eventStore" event-bus="eventBus">
+        <axon:snapshotter-trigger event-count-threshold="50" snapshotter-ref="snapshotter"/>
+    </axon:event-sourcing-repository>
+
+    <axon:aggregate-command-handler id="userCommandHandler"
+                                    aggregate-type="com.undancer.breath.samples.user.entity.User"
+                                    repository="userRepository" command-bus="commandBus"/>
+
+    <axon:filesystem-event-store id="eventStore" base-dir="events"/>
+
+    <axon:cluster id="defaultCluster" default="true">
+
+
+        <!--<axon:replay-config/>-->
+
+    </axon:cluster>
+
+    <axon:snapshotter id="snapshotter" event-store="eventStore" executor="taskExecutor"/>
+
+</beans>

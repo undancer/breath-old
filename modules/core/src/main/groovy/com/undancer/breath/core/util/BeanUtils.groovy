@@ -44,6 +44,10 @@ class BeanUtils implements BeanFactoryPostProcessor {
         beanFactory.getBean(name)
     }
 
+    static <T> T getBean(String name, Class<T> requiredType) {
+        beanFactory.getBean(name, requiredType)
+    }
+
     static Map<String, Object> getBeansWithAnnotation(Class<? extends Annotation> annotationType) {
         beanFactory.getBeansWithAnnotation(annotationType)
     }

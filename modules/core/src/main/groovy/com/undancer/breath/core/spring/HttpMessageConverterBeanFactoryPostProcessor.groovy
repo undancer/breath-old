@@ -6,9 +6,12 @@ import org.springframework.beans.factory.config.ConfigurableListableBeanFactory
 import org.springframework.http.converter.HttpMessageConverter
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter
 
+import javax.inject.Named
+
 /**
  * Created by undancer on 13-12-27.
  */
+@Named
 class HttpMessageConverterBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
 
     void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {

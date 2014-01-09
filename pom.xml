@@ -11,7 +11,9 @@
 
     <modules>
         <module>modules/core</module>
-        <module>modules/shiro-memcached</module>
+        <module>modules/json</module>
+        <module>modules/cqrs</module>
+        <module>modules/security</module>
         <module>samples/webapp</module>
     </modules>
 
@@ -101,6 +103,21 @@
                 <artifactId>jackson-databind</artifactId>
                 <version>2.3.0</version>
             </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.11</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>1.9.5</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>5.0.1.Final</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <dependencies>
@@ -163,4 +180,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

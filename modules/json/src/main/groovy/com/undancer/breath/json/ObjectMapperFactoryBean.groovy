@@ -14,7 +14,7 @@ class ObjectMapperFactoryBean extends AbstractFactoryBean<ObjectMapper> {
 
     protected ObjectMapper createInstance() throws Exception {
         def objectMapper = [] as ObjectMapper
-//        objectMapper.registerModule()
+
         objectMapper
     }
 }

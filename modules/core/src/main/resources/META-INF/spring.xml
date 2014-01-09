@@ -4,8 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
     <import resource="classpath:META-INF/spring/jstl-config.xml"/>
-    <import resource="classpath:META-INF/spring/jackson-config.xml"/>
     <import resource="classpath*:META-INF/spring/filter-config.xml"/>
+    <import resource="classpath:META-INF/spring/validation-config.xml"/>
     <import resource="classpath:META-INF/spring/webmvc-support-config.xml"/>
 
     <context:component-scan base-package="com.undancer.breath.core"/>
