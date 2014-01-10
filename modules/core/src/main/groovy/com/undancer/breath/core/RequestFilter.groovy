@@ -29,8 +29,15 @@ class RequestFilter extends OncePerRequestFilter {
     @PackageScope
     void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
 
+        def url, method
         if (log.debugEnabled) {
             timer = Stopwatch.createStarted()
+            method = request.method.toUpperCase()
+            url = request.requestURL
+            def query = request.queryString
+            if (query) {
+                url.append('?').append(query)
+            }
         }
 
         requestHolder.set(request)
@@ -53,7 +60,7 @@ class RequestFilter extends OncePerRequestFilter {
                 }
                 def time = timer.elapsed(TimeUnit.MILLISECONDS)
 
-                log.debug("[breath/core] on $time ms.")
+                log.debug("[breath/core][$method] $url on $time ms.")
             }
         }
 
