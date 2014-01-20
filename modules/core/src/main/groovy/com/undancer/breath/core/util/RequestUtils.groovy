@@ -43,6 +43,10 @@ class RequestUtils implements ApplicationContextAware {
         request.getHeader(name)
     }
 
+    static String getParameter(String name) {
+        request.getParameter(name)
+    }
+
     static String getUserAgent() {
         getHeader('User-Agent')
     }

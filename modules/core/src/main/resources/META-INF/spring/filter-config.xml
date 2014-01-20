@@ -15,4 +15,8 @@
 
     </bean>
 
+    <bean id="jsonpFilter" class="com.undancer.breath.core.filter.JsonpRequestFilter">
+
+    </bean>
+
 </beans>
