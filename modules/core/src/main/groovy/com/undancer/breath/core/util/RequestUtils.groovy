@@ -39,4 +39,24 @@ class RequestUtils implements ApplicationContextAware {
         uri
     }
 
+    static String getHeader(String name) {
+        request.getHeader(name)
+    }
+
+    static String getUserAgent() {
+        getHeader('User-Agent')
+    }
+
+    static boolean isAjaxRequest() {
+        'XMLHttpRequest'.equalsIgnoreCase(request.getHeader('x-requested-with'))
+    }
+
+    static boolean isGetRequest() {
+        'GET'.equalsIgnoreCase(request.method)
+    }
+
+    static boolean isPostRequest() {
+        'POST'.equalsIgnoreCase(request.method)
+    }
+
 }
