@@ -16,7 +16,6 @@
         <dependency>
             <groupId>com.github.undancer</groupId>
             <artifactId>breath-core</artifactId>
-            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.shiro</groupId>
