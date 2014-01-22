@@ -24,12 +24,11 @@ class RequestFilter extends OncePerRequestFilter {
 
     private static final def requestHolder = ['request'] as NamedThreadLocal<HttpServletRequest>
 
-    private Stopwatch timer
-
     @PackageScope
     void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
 
-        def url, method
+        def url, method, timer
+
         if (log.debugEnabled) {
             timer = Stopwatch.createStarted()
             method = request.method.toUpperCase()
