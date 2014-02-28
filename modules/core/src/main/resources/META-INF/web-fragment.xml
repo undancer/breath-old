@@ -70,12 +70,12 @@
             <param-value>org.springframework.web.context.WebApplicationContext.ROOT</param-value>
         </init-param>
         <!--<init-param>-->
-            <!--<param-name>dispatchOptionsRequest</param-name>-->
-            <!--<param-value>true</param-value>-->
+        <!--<param-name>dispatchOptionsRequest</param-name>-->
+        <!--<param-value>true</param-value>-->
         <!--</init-param>-->
         <!--<init-param>-->
-            <!--<param-name>dispatchTraceRequest</param-name>-->
-            <!--<param-value>true</param-value>-->
+        <!--<param-name>dispatchTraceRequest</param-name>-->
+        <!--<param-value>true</param-value>-->
         <!--</init-param>-->
         <load-on-startup>1</load-on-startup>
     </servlet>

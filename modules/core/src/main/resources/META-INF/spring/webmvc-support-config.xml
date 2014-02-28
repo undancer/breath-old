@@ -18,6 +18,10 @@
         <property name="useJaf" value="true"/>
     </bean>
 
+    <mvc:interceptors>
+        <bean class="com.undancer.breath.core.spring.TimerHandlerInterceptor"/>
+    </mvc:interceptors>
+
     <!--<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">-->
     <!--<property name="defaultStatusCode" value="500"/>-->
     <!--<property name="exceptionMappings">-->

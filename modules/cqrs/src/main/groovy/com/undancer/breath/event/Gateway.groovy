@@ -1,7 +1,5 @@
 package com.undancer.breath.event
 
-import org.axonframework.commandhandling.gateway.CommandGateway
-
 import java.util.concurrent.TimeUnit
 
 /**

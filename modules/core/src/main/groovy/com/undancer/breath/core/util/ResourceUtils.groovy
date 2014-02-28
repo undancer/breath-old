@@ -76,7 +76,7 @@ class ResourceUtils {
         }
 
         list.sort { o1, o2 ->
-            o1.path.indexOf(PREFIX)<=>o2.path.indexOf(PREFIX)
+            o1.path.indexOf(PREFIX) <=> o2.path.indexOf(PREFIX)
         }
 
         list
