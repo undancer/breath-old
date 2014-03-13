@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="application/javascript" src="/assets/socket.io/socket.io.min.js"></script>
+    <script type="application/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="application/javascript">
+
+        $(function () {
+//            var socket = io.connect('', {'resource': 'chat'});
+            var socket = io.connect('');
+//            var socket = io.connect('127.0.0.1:4000');
+
+//            socket.on('time', function (data) {
+//                console.log(data);
+//                socket.emit('my other event', { my: 'data' });
+//            });
+
+            $("#send-message").submit(function () {
+                socket.emit('msg', new Date());
+//                socket.disconnect();
+//                socket.disconnectSync();
+                return false;
+            });
+//            socket.close()
+//            socket.disconnect();
+        });
+    </script>
+</head>
+<body>
+<div>
+    <form id="send-message">
+        <button>Send</button>
+    </form>
+    <a href="javascript:;">连接</a>
+</div>
+<!--<script type="text/javascript">-->
+<!--var webSocket = new WebSocket('ws://localhost:8080/websocket/time');-->
+<!--webSocket.onerror = function (event) {-->
+<!--onError(event)-->
+<!--};-->
+<!--webSocket.onopen = function (event) {-->
+<!--onOpen(event)-->
+<!--};-->
+<!--webSocket.onmessage = function (event) {-->
+<!--onMessage(event)-->
+<!--};-->
+<!--function onMessage(event) {-->
+<!--document.getElementById('messages').innerHTML-->
+<!--+= '<br />' + event.data;-->
+<!--}-->
+<!--function onOpen(event) {-->
+<!--document.getElementById('messages').innerHTML-->
+<!--= 'Connection established';-->
+<!--}-->
+<!--function onError(event) {-->
+<!--alert(event.data);-->
+<!--}-->
+<!--function start() {-->
+<!--webSocket.send('hello');-->
+<!--return false;-->
+<!--}-->
+<!--</script>-->
+</body>
+</html>

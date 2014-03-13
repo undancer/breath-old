@@ -5,7 +5,7 @@
        xsi:schemaLocation="http://www.axonframework.org/schema/core http://www.axonframework.org/schema/axon-core.xsd
        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <axon:annotation-config/>
+    <axon:annotation-config command-bus="commandBus" event-bus="eventBus"/>
 
     <axon:event-bus id="eventBus"/>
     <axon:command-bus id="commandBus"/>

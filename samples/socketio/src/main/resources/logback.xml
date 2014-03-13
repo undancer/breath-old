@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%date{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--<appender name="rollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+    <!--<file>/tmp/logs/quickstart.log</file>-->
+    <!--<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+    <!--<fileNamePattern>/tmp/logs/quickstart.%d{yyyy-MM-dd}.log</fileNamePattern>-->
+    <!--</rollingPolicy>-->
+    <!--<encoder>-->
+    <!--<pattern>%date{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>-->
+    <!--</encoder>-->
+    <!--</appender>-->
+
+    <!-- project default level -->
+    <!--<logger name="org.springside.examples.quickstart" level="INFO"/>-->
+
+    <!--log4jdbc -->
+    <!--<logger name="jdbc.sqltiming" level="INFO"/>-->
+
+    <logger name="org.atmosphere.socketio.transport.WebSocketTransport" level="OFF"/>
+    <logger name="org.atmosphere.websocket.DefaultWebSocketProcessor" level="OFF"/>
+    <!--<logger name="org.atmosphere.websocket.WebSocketEventListenerAdapter" level="TRACE"/>-->
+    <logger name="org.atmosphere.websocket.protocol.EchoProtocol" level="OFF"/>
+    <logger name="org.atmosphere.cpr.DefaultBroadcasterFactory" level="TRACE"/>
+    <!--<logger name="org.atmosphere.socketio.transport" level="TRACE"/>-->
+    <!--<logger name="org.atmosphere.websocket.protocol.ProtocolUtil" level="OFF"/>-->
+    <!--<logger name="org.atmosphere.websocket.protocol.SimpleHttpProtocol" level="OFF"/>-->
+    <!--<logger name="org.atmosphere.websocket.protocol.StreamingHttpProtocol" level="OFF"/>-->
+    <!--<logger name="org.atmosphere.socketio.transport" level="OFF"/>-->
+    <!--<logger name="org.atmosphere.socketio" level="OFF"/>-->
+    <!--<logger name="org.atmosphere" level="OFF"/>-->
+    <!--<logger name="org" level="OFF"/>-->
+
+    <root level="DEBUG">
+        <appender-ref ref="console"/>
+        <!--<appender-ref ref="rollingFile"/>-->
+    </root>
+</configuration>

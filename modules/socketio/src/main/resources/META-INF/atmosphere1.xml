@@ -1,0 +1,221 @@
+<!--<atmosphere-handlers>-->
+    <!--<atmosphere-handler support-session="true"-->
+                        <!--context-root="/socket.io" class-name="SocketIOChat"-->
+                        <!--broadcaster="SocketIOBroadcaster"-->
+                        <!--broadcasterCache=""-->
+                        <!--broadcastFilterClasses=""-->
+                        <!--interceptorClasses=""-->
+                        <!--comet-support="">-->
+
+        <!--&lt;!&ndash;<property name="servletClassName"&ndash;&gt;-->
+        <!--&lt;!&ndash;value="com.sun.jersey.spi.container.servlet.ServletContainer"/>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<applicationConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.jersey.servlet-mapping</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</applicationConfig>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<applicationConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.useBlocking</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</applicationConfig>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<applicationConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.useNative</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</applicationConfig>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<applicationConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.useWebSocket</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</applicationConfig>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<applicationConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.useStream</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</applicationConfig>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<applicationConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.cpr.broadcasterFactory</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</applicationConfig>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<applicationConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.cpr.broadcasterClass</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</applicationConfig>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<applicationConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.cpr.broadcasterCacheClass</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</applicationConfig>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<applicationConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.cpr.asyncSupport</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</applicationConfig>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<applicationConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.cpr.sessionSupport</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</applicationConfig>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<applicationConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.resumeOnBroadcast</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</applicationConfig>&ndash;&gt;-->
+
+
+        <!--&lt;!&ndash;<applicationConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.cpr.noCacheHeaders</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</applicationConfig>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<applicationConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.cpr.dropAccessControlAllowOriginHeader&ndash;&gt;-->
+        <!--&lt;!&ndash;</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</applicationConfig>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<applicationConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.cpr.broadcasterLifeCyclePolicy&ndash;&gt;-->
+        <!--&lt;!&ndash;</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</applicationConfig>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<applicationConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.websocket.WebSocketProcessor</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</applicationConfig>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<applicationConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.websocket.messageContentType</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</applicationConfig>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<applicationConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.websocket.messageMethod</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</applicationConfig>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<applicationConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.websocket.maxIdleTime</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</applicationConfig>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<applicationConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.websocket.bufferSize</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</applicationConfig>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<applicationConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.websocket.pathDelimiter</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</applicationConfig>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<applicationConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.cpr.AtmosphereResource</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</applicationConfig>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<applicationConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.cpr.broadcastFilterClasses</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</applicationConfig>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<applicationConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.cpr.AtmosphereServlet.resumeAndKeepAlive&ndash;&gt;-->
+        <!--&lt;!&ndash;</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</applicationConfig>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<applicationConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.cpr.AtmosphereServlet.resumedOnTimeout&ndash;&gt;-->
+        <!--&lt;!&ndash;</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</applicationConfig>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<applicationConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.disableOnStateEvent</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</applicationConfig>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<applicationConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.cpr.AsyncSupport.maxInactiveActivity&ndash;&gt;-->
+        <!--&lt;!&ndash;</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</applicationConfig>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<applicationConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.cpr.Trackable</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</applicationConfig>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<applicationConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.cpr.allowQueryStreamAsPostOrGet&ndash;&gt;-->
+        <!--&lt;!&ndash;</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</applicationConfig>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<applicationConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.cpr.customCometSupport</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</applicationConfig>&ndash;&gt;-->
+
+
+        <!--&lt;!&ndash;<frameworkConfig>&ndash;&gt;-->
+
+
+        <!--&lt;!&ndash;<param-name>org.atmosphere.jersey.JerseyBroadcaster</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</frameworkConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<frameworkConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.plugin.redis.RedisBroadcaster</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</frameworkConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<frameworkConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.plugin.jms.JMSBroadcaster</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</frameworkConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<frameworkConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.plugin.jgroups.JGroupsBroadcaster&ndash;&gt;-->
+        <!--&lt;!&ndash;</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</frameworkConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<frameworkConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.plugin.xmpp.XMPPBroadcaster</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</frameworkConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<frameworkConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>com.sun.jersey.spi.container.servlet.ServletContainer&ndash;&gt;-->
+        <!--&lt;!&ndash;</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</frameworkConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<frameworkConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.cpr.AtmosphereServlet</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</frameworkConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<frameworkConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.cpr.AtmosphereResource</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</frameworkConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<frameworkConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.cpr.AsynchronousProcessor.supportSession&ndash;&gt;-->
+        <!--&lt;!&ndash;</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</frameworkConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<frameworkConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.cpr.AtmosphereHandler</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</frameworkConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<frameworkConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.jersey.containerResponse</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</frameworkConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<frameworkConfig>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>org.atmosphere.cpr.AtmosphereResource.writeHeader&ndash;&gt;-->
+        <!--&lt;!&ndash;</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value></param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</frameworkConfig>&ndash;&gt;-->
+    <!--</atmosphere-handler>-->
+<!--</atmosphere-handlers>-->
